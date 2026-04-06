@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./App.css";
+import Input from "./Input";
 
 function HelloWorld(props) {
   const [isTrue, setIsTrue] = useState(true);
@@ -70,6 +71,26 @@ function HelloWorld(props) {
             onChange={(event) => setFirstName(event.target.value)}
           />
         </div>
+
+        <Input
+          title="Last Name"
+          type="text"
+          name="last-name"
+          id="last-name"
+          autoComplete="last-name-new"
+          className="form-control"
+          onChange={(event) => setLastName(event.target.value)}
+        />
+
+        <Input
+          title="Date of Birth"
+          type="date"
+          name="dob"
+          id="dob"
+          autoComplete="dob-new"
+          className="form-control"
+          onChange={(event) => setDob(event.target.value)}
+        />
       </form>
 
       <div>
