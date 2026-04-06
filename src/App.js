@@ -9,7 +9,10 @@ function HelloWorld(props) {
   const [lastName, setLastName] = useState("");
   const [dob, setDob] = useState("");
 
+  // refs
   const firstNameRef = useRef();
+  const lastNameRef = useRef(null);
+  const dobRef = useRef(null);
 
   const toggleTrue = () => {
     if (isTrue) {
@@ -75,6 +78,8 @@ function HelloWorld(props) {
     setDob("");
 
     firstNameRef.current.value = "";
+    lastNameRef.current.value = "";
+    dobRef.current.value = "";
   };
 
   return (
@@ -115,6 +120,7 @@ function HelloWorld(props) {
         <Input
           title="Last Name"
           type="text"
+          ref={lastNameRef}
           name="last-name"
           id="last-name"
           autoComplete="last-name-new"
@@ -125,6 +131,7 @@ function HelloWorld(props) {
         <Input
           title="Date of Birth"
           type="date"
+          ref={dobRef}
           name="dob"
           id="dob"
           autoComplete="dob-new"
