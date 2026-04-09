@@ -8,6 +8,11 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(email, password);
+
+    if (email === "admin@example.com") {
+      
+    }
+    
   };
 
   return (
@@ -31,6 +36,10 @@ const Login = () => {
           autoComplete="password-new"
           onChange={(event) => setPassword(event.target.value)}
         />
+
+        <hr />
+
+        <input type="submit" className="btn btn-primary" value="Login" />
       </form>
     </div>
   );
