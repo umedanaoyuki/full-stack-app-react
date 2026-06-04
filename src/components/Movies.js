@@ -40,7 +40,7 @@ const Movies = () => {
                 <Link to={`/movies/${m.id}`}>{m.title}</Link>
               </td>
               <td>{m.release_date}</td>
-              <td>{m.mpaa_rating}</td>
+              <td>{m.mpaa}</td>
             </tr>
           ))}
         </tbody>
